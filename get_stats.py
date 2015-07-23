@@ -45,7 +45,9 @@ def timestamped_payload(project):
         'data': get_stats(project),
     }
 
-    with open('logfile-%s.txt' % project, 'a') as logfile:
+    logfile_uri = os.path.join(os.path.dirname(__file__),
+                               'logfile-%s.txt' % project)
+    with open(logfile_uri, 'a') as logfile:
         logfile.write(json.dumps(data) + '\n')
 
 if __name__ == '__main__':
