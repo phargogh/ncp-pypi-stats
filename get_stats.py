@@ -54,7 +54,8 @@ if __name__ == '__main__':
     projects = [
         'pygeoprocessing',
         'natcap.versioner',
-        'natcap.rios'
+        'natcap.rios',
+        'natcap.opal'
     ]
     for project in projects:
         timestamped_payload(project)
